@@ -9,10 +9,10 @@ import {
     Form
 
 } from "@/components/ui/form"
-import { Input } from "../../dk_mocker/components/ui/input"
+
 import Link from "next/link";
 import {toast} from "sonner";
-import {error} from "next/dist/build/output/log";
+
 import FormField from "./FormField";
 import {useRouter} from "next/navigation";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
