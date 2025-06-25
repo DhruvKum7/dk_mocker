@@ -6,7 +6,7 @@ import {Button} from "@/components/ui/button";
 import DisplayTechIcons from "./DisplayTechIcons";
 
 
-const InterviewCard = ({interviewId , userId , role , type , techstack , createdAt}:InterviewCardProps) => {
+const InterviewCard = ({id , userId , role , type , techstack , createdAt}:InterviewCardProps) => {
     const feedback = null as Feedback| null ;
     const normalizedType = /mix/gi.test(type) ? "Mixed" : type;
     const formattedDate = dayjs(
@@ -70,8 +70,8 @@ const InterviewCard = ({interviewId , userId , role , type , techstack , created
                         <Link
                             href={
                                 feedback
-                                    ? `/interview/${interviewId}/feedback`
-                                    : `/interview/${interviewId}`
+                                    ? `/interview/${id}/feedback`
+                                    : `/interview/${id}`
                             }
                         >
                             {feedback ? "Check Feedback" : "View Interview"}
